@@ -78,7 +78,7 @@ io.on('connection', (socket) => {
   console.log('user connected', socket.id);
 });
 
-http.listen(7777, (err) => {
+http.listen(process.env.PORT || 5000, (err) => {
   if (err) {
     throw Error(err);
   }
