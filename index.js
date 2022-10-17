@@ -3,11 +3,7 @@ let cors = require('cors');
 
 const app = express();
 const http = require('http').Server(app);
-const io = require('socket.io')(http, {
-  cors: {
-    origin: ['https://lite-messenger-backend.herokuapp.com'],
-  },
-});
+const io = require('socket.io')(http);
 
 app.use(cors());
 app.use(express.json());
