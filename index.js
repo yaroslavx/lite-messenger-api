@@ -22,7 +22,7 @@ app.get('/rooms/:id', (req, res) => {
 });
 
 app.post('/rooms', (req, res) => {
-  const { roomId, userName } = req.body;
+  const { roomId } = req.body;
   if (!rooms.has(roomId)) {
     rooms.set(
       roomId,
